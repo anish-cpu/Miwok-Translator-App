@@ -9,15 +9,21 @@ public class Word {
 
     /** Image resource ID for the word*/
     private int mImageResourceId=-1;
+
+    /** Audio resource ID for the word*/
+    private int mAudioResourceId;
+
     //Constructors
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
-    public Word(String defaultTranslation, String miwokTranslation, int ImageResourceId) {
+    public Word(String defaultTranslation, String miwokTranslation, int ImageResourceId, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = ImageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -41,10 +47,11 @@ public class Word {
         return mImageResourceId;
     }
 
-//    Checks if an ID has been allocated to mImageResourceId
+    // Checks if an ID has been allocated to mImageResourceId
     public boolean hasImage(){
         return mImageResourceId!=-1;
     }
 
-
+    //Returns the audio resource ID of the word.
+    public int getmAudioResourceId() { return mAudioResourceId; }
 }
