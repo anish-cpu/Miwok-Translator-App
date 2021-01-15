@@ -66,7 +66,7 @@ public class NumbersActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 
-        //Create a list of words
+        //Create an ArrayList of objects of Word.java
         final ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("one", "lutti",R.drawable.number_one, R.raw.number_one));
         words.add(new Word("two", "otiiko",R.drawable.number_two, R.raw.number_two));
@@ -132,7 +132,8 @@ public class NumbersActivity extends AppCompatActivity {
      */
     private void releaseMediaPlayer() {
         // If the media player is not null, then it may be currently playing a sound.
-        if (mMediaPlayer != null) {
+        if (mMediaPlayer != null)
+        {
             // Regardless of the current state of the media player, release its resources
             // because we no longer need it.
             mMediaPlayer.release();

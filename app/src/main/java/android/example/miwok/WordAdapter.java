@@ -32,8 +32,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         // Check if an existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
         // Get the {@link Word} object located at this position in the list
@@ -65,7 +64,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         textContainer.setBackgroundColor(color);
 
 
-        // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
+        // Return the whole list item layout (containing 2 TextViews and 2 ImageViews) so that it can be shown in
         // the ListView.
         return listItemView;
     }
